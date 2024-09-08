@@ -7,7 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/product/api/v1")
+@RequestMapping("/api/v1/product")
 public class ProductController {
 
     private final ProductService productService;
@@ -37,8 +37,8 @@ public class ProductController {
         return null;
     }
 
-    @GetMapping(value = "/getProductsByCategory")
-    public ResponseEntity<Object> getProductsByCategory(@RequestParam String category) {
+    @GetMapping(value = "/getAllProductsByCategory")
+    public ResponseEntity<Object> getAllProductsByCategory(@RequestParam String category) {
          return null;
     }
 

@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/vendor/api/v1")
+@RequestMapping("/api/v1/vendor")
 public class VendorController {
 
     private final VendorService vendorService;
@@ -32,6 +32,11 @@ public class VendorController {
     @PutMapping(value = "/updateVendor/{vendorId}")
     public ResponseEntity<Vendor> updateVendor(@RequestBody Vendor vendor, @PathVariable long vendorId) {
         return vendorService.updateVendor(vendor, vendorId);
+    }
+
+    @DeleteMapping("/deleteVendor/{vendorId}")
+    public ResponseEntity<Object> deleteVendor(@PathVariable long vendorId) {
+        return vendorService.deleteVendor(vendorId);
     }
 
 }

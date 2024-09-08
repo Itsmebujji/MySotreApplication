@@ -1,16 +1,16 @@
 package com.vineeth.mystore.entities;
 
-import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.*;
 
-@Entity
+
 @Data
 @Getter
 @Setter
 @NoArgsConstructor
+@AllArgsConstructor
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,14 +22,4 @@ public class Product {
     private double productPrice;
     private String productImage;
     private String productStatus;
-
-    public Product(long productId, String productName, String productDescription, String productCategory, double productPrice, String productImage, String productStatus) {
-        this.productId = productId;
-        this.productName = productName;
-        this.productDescription = productDescription;
-        this.productCategory = productCategory;
-        this.productPrice = productPrice;
-        this.productImage = productImage;
-        this.productStatus = productStatus;
-    }
 }

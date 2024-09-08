@@ -63,4 +63,13 @@ public class VendorService {
             }
         }
     }
+
+    public ResponseEntity<Object> deleteVendor(long vendorId) {
+        if(vendorId==0){
+            return ResponseEntity.badRequest().build();
+        }else{
+            myStoreRepository.deleteById((int) vendorId);
+            return new ResponseEntity<>("Vendor is removed successfully", HttpStatus.OK);
+        }
+    }
 }
