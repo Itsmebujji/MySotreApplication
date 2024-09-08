@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: MyStore
+server:
+  servlet:
+    context-path: /mystore
+  port: 8080
+
+logging:
+  level:
+    web: info
