@@ -29,17 +29,17 @@ public class ProductController {
 
     @PutMapping(value = "/updateProduct/{productID}")
     public ResponseEntity<Product> updateProduct(@RequestBody Product product, @PathVariable Long productID) {
-        return null;
+        return productService.updateProduct(product,productID);
     }
 
     @DeleteMapping(value = "/deleteProduct/{productID}")
     public ResponseEntity<Object> deleteProduct(@PathVariable Long productID) {
-        return null;
+        return productService.deleteProduct(productID);
     }
 
     @GetMapping(value = "/getAllProductsByCategory")
-    public ResponseEntity<Object> getAllProductsByCategory(@RequestParam String category) {
-         return null;
+    public ResponseEntity<Object> getAllProductsByCategory(@RequestParam(name="category") String category) {
+         return productService.getAllProductsByCategory(category);
     }
 
 }

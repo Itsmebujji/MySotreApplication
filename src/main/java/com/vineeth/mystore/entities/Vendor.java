@@ -20,5 +20,4 @@ public class Vendor {
     private String vendorEmail;
     private String vendorPhone;
     private String vendorAddress;
-
 }
